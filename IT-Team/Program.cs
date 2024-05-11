@@ -5,7 +5,6 @@ using IT_Team.Developers;
 using IT_Team.Liders;
 using IT_Team.Engineers;
 
-var printer = new Printer();
 
 var teamLead = new TeamLead("John Doe");
 
@@ -20,25 +19,20 @@ var businessAnalyst = new BussinesAnalyst("Henry Miller", Level.Middle);
 
 // Вывод информации о каждом члене команды
 
-Console.WriteLine("Team Lead:");
-printer.PrintEmployeeInfo(teamLead);
-Console.WriteLine();
+List<Employee> employees = new List<Employee>
+{
+    backendDeveloper,
+    webDeveloper,
+    iOSDeveloper,
+    androidDeveloper,
+    manualQaEngineer,
+    autoQaEngineer,
+    systemAnalyst,
+    businessAnalyst,
+    teamLead
+};
 
-
-printer.PrintDeveloperInfo(backendDeveloper);
-
-printer.PrintDeveloperInfo(androidDeveloper);
-
-printer.PrintDeveloperInfo(webDeveloper);
-
-printer.PrintDeveloperInfo(iOSDeveloper);
-
-printer.PrintQAEngineerInfo(manualQaEngineer);
-
-printer.PrintQAEngineerInfo(autoQaEngineer);
-
-printer.PrintAnalystInfo(systemAnalyst);
-
-printer.PrintAnalystInfo(businessAnalyst);
-
-
+foreach (var employee in employees)
+{
+    Console.WriteLine(employee);
+}

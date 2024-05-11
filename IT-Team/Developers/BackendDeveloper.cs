@@ -1,8 +1,10 @@
+using IT_Team.Specialization;
+
 namespace IT_Team.Developers;
 
-public class BackendDeveloper : Developer
+public record BackendDeveloper : Developer
 {
-    public BackendDeveloper(string name, Level level) : base(name, level, "Beckend")
+    public BackendDeveloper(string name, Level level) : base(name, level,DevelopersSpecialization.Backend)
     {
     }
 }

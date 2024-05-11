@@ -1,8 +1,10 @@
+using IT_Team.Specialization;
+
 namespace IT_Team.Developers;
 
-public class IosDeveloper : Developer
+public record IosDeveloper : Developer
 {
-    public IosDeveloper(string name, Level level) : base(name, level, "IOS")
+    public IosDeveloper(string name, Level level) : base(name, level,DevelopersSpecialization.iOS)
     {
     }
 }

@@ -1,8 +1,10 @@
+using IT_Team.Specialization;
+
 namespace IT_Team.Analysts;
 
-public class SystemAnalyst : Analyst
+public record SystemAnalyst : Analyst
 {
-    public SystemAnalyst(string name, Level level) : base(name, level, "SA")
+    public SystemAnalyst(string name, Level level) : base(name, level,AnalystSpecialization.SA)
     {
     }
 }

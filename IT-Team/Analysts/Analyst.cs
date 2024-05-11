@@ -1,10 +1,13 @@
+using IT_Team.Engineers;
+using IT_Team.Specialization;
+
 namespace IT_Team.Analysts;
 
-public class Analyst : Employee
+public record Analyst : Engineer
 {
-    public string Specialization { get; set; }
+    public AnalystSpecialization Specialization { get; set; }
     
-    public Analyst(string name, Level level, string specialization) : base(name, level)
+    public Analyst(string name, Level level, AnalystSpecialization specialization) : base(name,level)
     {
         Specialization = specialization;
     }
